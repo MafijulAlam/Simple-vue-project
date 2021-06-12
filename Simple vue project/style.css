@@ -1,0 +1,23 @@
+.container-fluid{
+    background-color: darkgray;
+}
+.bazarlist{
+    widows: 200px;
+    background-color: azure;
+}
+.container-fluid h1{
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+.container h4{
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+.footer{
+    margin-top: 100px;
+    float: right;
+    color: white;
+    background-color: darkgray;
+}

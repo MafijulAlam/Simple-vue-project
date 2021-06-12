@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Vue Project with Bootstrap</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    
+</head>
+<body>
+    
+   <div id="app" class="container-fluid">
+       <div class="row">
+           <div class="col-md-4"></div>
+           <div class="col-md-4">
+               <h1>Bazar List</h1>
+               <form @submit.prevent="addItems">
+                   <input v-model="newItem" class="form-control">
+               </form>
+               <h4>Price per KG</h4>
+                 <ul class="list-group">
+                    <li v-for="(item,index) in items" :key="index" class="list-group-item">
+                    <button class="btn btn-xs btn-danger" @click="removeItem(index)">Remove</button>
+                    {{item.name}}- <input class="inputPrice" v-model="item.price">
+                    </li>
+                    <li class="list-group-item">
+                    total = {{total}}
+                    </li>
+                    
+                 </ul> 
+           </div>
+           <div class="col-md-4"></div>
+       </div>
+       <div class="row">
+           <div class="col-md-12">
+            <div class="footer">
+           <p>@ All Rights Reserved Md Mafijul Alam</p>
+           </div>
+           </div>
+       </div>
+   </div>
+    
+    
+    
+    
+    <script src="js/vue.js"></script>
+    <script src="index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
